@@ -20,11 +20,6 @@ class MyComp extends HTMLElement {
     this.render();
   }
 
-  disconnectedCallback() {
-    this.img = this.removeAttribute("img");
-    this.render();
-  }
-
   render() {
     this.innerHTML = `
             <div class="card">
