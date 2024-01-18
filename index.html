@@ -8,17 +8,77 @@
     />
     <title>Custom component</title>
   </head>
-  <body>
-    <el-card
-      cardName="hiii"
-      context="asdf"
-      button="joasdf"
-      img="./desktop-design.jpg"
-      imgWidth="600px"
-      imgHeight="300px"
-    />
-    <h1 id="id">hi</h1>
+  <style>
+    body {
+      display: flex;
+      height: 100vh;
+    }
 
+    .card {
+      background-color: rgb(75, 96, 96);
+      width: 300px;
+      margin: 20px;
+    }
+
+    #container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .cart {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      width: 30%;
+      height: 100%;
+      background-color: red;
+      transform: translateX(100%);
+      transition: 0.3s ease;
+    }
+
+    .cart.hide {
+      transform: translateX(0%);
+    }
+
+    #cart_button {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      padding: 20px 40px;
+      background-color: red;
+      font-size: 20px;
+    }
+
+    #shop {
+      background-color: blue;
+      width: 100%;
+    }
+
+    #count {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: aqua;
+      padding: 10px;
+      border-radius: 50%;
+    }
+  </style>
+  <body>
+    <div id="container"></div>
+    <button id="cart_button">
+      CART
+      <span id="count">0</span>
+    </button>
+    <div class="cart">
+      <button id="cross">CORSS</button>
+      <div id="shop"></div>
+    </div>
     <script src="./new.js"></script>
   </body>
 </html>
